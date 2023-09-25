@@ -1,0 +1,57 @@
+# Node.js and NPM
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Compiled output
+/dist/
+/build/
+/out/
+/public/bundle.js
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# MacOS .DS_Store files
+.DS_Store
+
+# Visual Studio Code
+.vscode/
+
+# Log files
+logs/
+*.log
+npm-debug.log*
+
+# Editor-specific files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.vscode/
+
+# Dependency directories
+/bower_components/
+/jspm_packages/
+
+# Typescript configuration
+tsconfig.json
+tsconfig.tsbuildinfo
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Android
+android/
+ios/
+
+# Jest
+coverage/
+
+# Yarn
+yarn-error.log
