@@ -2,10 +2,10 @@
   "name": "deezsnippets",
   "displayName": "deezSnippets",
   "description": "epic vscode snippets",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "kikiluvv",
-  "icon": "/images/icon.png",
   "repository": "https://github.com/kikiluvv/deezSnippets",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.0.0"
   },
