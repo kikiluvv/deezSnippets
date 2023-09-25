@@ -23,8 +23,8 @@
     ],
     "description": "Create a boilerplate MERN server"
   },
-  "Boilerplate React Page": {
-    "prefix": "dreact",
+  "Boilerplate React Functional Component": {
+    "prefix": "drfc",
     "body": [
       "import React from 'react';",
       "import '../styles/$1';",
@@ -39,10 +39,91 @@
       "",
       "export default $2;"
     ],
-    "description": "Create a boilerplate React Page"
+    "description": "Create a boilerplate React Functional Component"
   },
+  "Boilerplate React Class Component": {
+    "prefix": "drcc",
+    "body": [
+      "import React, { Component } from 'react';",
+      "import '../styles/$1';",
+      "",
+      "class $2 extends Component {",
+      "  render() {",
+      "    return (",
+      "      <div id='wrapper--$3'>",
+      "        <h1>deezSnippets 🥜</h1>",
+      "      </div>",
+      "    );",
+      "  }",
+      "}",
+      "",
+      "export default $2;"
+    ],
+    "description": "Create a boilerplate React Class-based Component"
+  },
+  "Import and Use useState Hook": {
+    "prefix": "duseState",
+    "body": [
+      "import React, { useState } from 'react';",
+      "",
+      "function $1() {",
+      "  const [$2, set$2] = useState($3);",
+      "  return (",
+      "    <div>",
+      "      <h1>$2</h1>",
+      "      <button onClick={() => set$2($3 + 1)}>Increment</button>",
+      "    </div>",
+      "  );",
+      "}",
+      "",
+      "export default $1;"
+    ],
+    "description": "Import and use the useState hook"
+  },
+  "Import and Use useEffect Hook": {
+    "prefix": "duseEffect",
+    "body": [
+      "import React, { useEffect } from 'react';",
+      "",
+      "function $1() {",
+      "  useEffect(() => {",
+      "    // Your effect code here",
+      "  }, []);",
+      "",
+      "  return (",
+      "    <div>",
+      "      <h1>$2</h1>",
+      "    </div>",
+      "  );",
+      "}",
+      "",
+      "export default $1;"
+    ],
+    "description": "Import and use the useEffect hook"
+  },
+  "Import and Use useContext Hook": {
+    "prefix": "duseContext",
+    "body": [
+      "import React, { useContext } from 'react';",
+      "",
+      "const $1Context = React.createContext();",
+      "",
+      "function $2() {",
+      "  const $3 = useContext($1Context);",
+      "",
+      "  return (",
+      "    <div>",
+      "      <h1>$4</h1>",
+      "    </div>",
+      "  );",
+      "}",
+      "",
+      "export default $2;"
+    ],
+    "description": "Import and use the useContext hook"
+  },        
   "Boilerplate Mongo Schema": {
-    "prefix": "dschema",
+    "prefix": "dmongo",
     "body": [
       "const mongoose = require('mongoose');",
       "",
@@ -62,7 +143,7 @@
     "body": [
       "const axios = require('axios');",
       "",
-      "axios.get('$1')",
+      "axios.$1('$2')",
       "  .then(response => {",
       "    console.log(response.data);",
       "  })",
@@ -70,68 +151,38 @@
       "    console.error(error);",
       "  });"
     ],
-    "description": "Make a HTTP GET request to the backend using Axios"
+    "description": "Make a HTTP request to the backend using Axios"
   },
-  "Gitignore Template": {
-    "prefix": "dgitignore",
+  "Express Controller": {
+    "prefix": "dcontroller",
     "body": [
-      "# Node.js and NPM",
-      "node_modules/",
-      "npm-debug.log",
-      "yarn-error.log",
+      "const express = require('express');",
+      "const router = express.Router();",
       "",
-      "# Compiled output",
-      "/dist/",
-      "/build/",
-      "/out/",
-      "/public/bundle.js",
+      "router.get('/', (req, res) => {",
+      "  // Controller logic for GET request here",
+      "});",
       "",
-      "# Environment files",
-      ".env",
-      ".env.local",
-      ".env.development.local",
-      ".env.test.local",
-      ".env.production.local",
+      "router.post('/', (req, res) => {",
+      "  // Controller logic for POST request here",
+      "});",
       "",
-      "# MacOS .DS_Store files",
-      ".DS_Store",
+      "// Add more route handlers as needed",
       "",
-      "# Visual Studio Code",
-      ".vscode/",
+      "module.exports = router;"
+    ],
+    "description": "Create an Express controller for handling routes"
+  },  
+  "Express Middleware": {
+    "prefix": "dmiddleware",
+    "body": [
+      "function $1(req, res, next) {",
+      "  // Middleware logic here",
+      "  next();",
+      "}",
       "",
-      "# Log files",
-      "logs/",
-      "*.log",
-      "npm-debug.log*",
-      "",
-      "# Editor-specific files",
-      ".idea/",
-      "*.suo",
-      "*.ntvs*",
-      "*.njsproj",
-      "*.sln",
-      ".vscode/",
-      "",
-      "# Dependency directories",
-      "/bower_components/",
-      "/jspm_packages/",
-      "",
-      "# Typescript configuration",
-      "tsconfig.json",
-      "tsconfig.tsbuildinfo",
-      "",
-      "# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)",
-      ".grunt",
-      "",
-      "# Android",
-      "android/",
-      "ios/",
-      "",
-      "# Jest",
-      "coverage/",
-      "",
-      "# Yarn",
-      "yarn-error.log"
-    ]
+      "module.exports = $1;"
+    ],
+    "description": "Create an Express middleware function"
   }
 }

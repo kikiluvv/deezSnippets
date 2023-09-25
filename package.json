@@ -2,7 +2,7 @@
   "name": "deezsnippets",
   "displayName": "deezSnippets",
   "description": "epic vscode snippets",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "publisher": "kikiluvv",
   "repository": "https://github.com/kikiluvv/deezSnippets",
   "icon": "icon.png",
@@ -17,6 +17,14 @@
       {
         "language": "javascript",
         "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "markdown",
+        "path": "./snippets/markdown.json"
+      },
+      {
+        "language": "gitignore",
+        "path": "./snippets/gitignore.json"
       }
     ]
   }
